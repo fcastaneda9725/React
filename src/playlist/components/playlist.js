@@ -1,6 +1,9 @@
 import React from 'react';
 import Media from './media';
 import Play from '../../icons/components/play';
+import FullScreen from '../../icons/components/fullScreen';
+import Pause from '../../icons/components/pause';
+import Volume from '../../icons/components/volume';
 
 // class Playlist extends Component {
 //   render() {
@@ -23,7 +26,10 @@ function Playlist (props) {
     console.log(props.data);
     return(
       <div className="Playlist">
-        <Play />
+        <Play size={50} color="red"/>
+        <FullScreen size={50} color="blue" />
+        <Pause size={50} color="purple"/>
+        <Volume size={50} color="gold"/>
         {
           playlist.map((item)=>{
             return <Media {...item} key={item.id}/>
